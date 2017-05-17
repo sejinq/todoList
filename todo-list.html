@@ -5,49 +5,54 @@
     <title>yourssu_assignment2</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
   </head>
-  <body>
-    <div class="ui inline dropdown" id="Menu">
+  <body style="background-color:powderblue;">
+    <div style="padding:10px;"class="ui inline dropdown" id="Menu">
     <div class="text">
     my todo-list...
     </div>
     <i class="dropdown icon"></i>
-    <div class="menu">
+    <div id="items" class="menu">
       <div class="item" data-value='create'>
         create todo
         <i class="plus icon"></i>
       </div>
-      <div class="item">
-        Jenny Hess
-          <div class="ui rating" data-max-rating="1"></div>
-      </div>
-      <div class="item">
-        Elliot Fu
-          <div class="ui rating" data-max-rating="1"></div>
-      </div>
-      <div class="item">
-        Stevie Feliciano
-          <div class="ui rating" data-max-rating="1"></div>
-      </div>
-      <div class="item">
-        Christian
-          <div class="ui rating" data-max-rating="1"></div>
-      </div>
+
     </div>
   </div>
-  <div class="ui grid">
-    <div class="two wide column">
-      <h1>3</h1>
-    </div>
-    <div class="twelve wide column">
-      <h1>10</h1>
-    </div>
-    <div class="two wide column">
-      <h1>3</h1>
-    </div>
-  </div>
-  <div class="ui right floated header">
+  <div style="padding:10px;"class="ui right floated header">
     <div class="ui small basic icon buttons">
      <button class="ui button"><i class="save icon"></i></button>
+    </div>
+  </div>
+<br><br><br><br>
+<!-- style="display:none;"  -->
+  <div class="ui grid">
+    <div class="four wide column">
+    </div>
+    <div id="default-text" class="eight wide column ui header ui container center aligned">
+      <h1>Create your todo!</h1>
+    </div>
+    <div style="display:none; background-color:#E6E6E6; padding:30px;" id="todo-list-content" class="eight wide column">
+      <div class="ui form">
+          <div class="field">
+            <label>Title</label>
+            <input id="title" type="text" value="mylist">
+          </div>
+        </div>
+        <p></p>
+      <div class="ui form">
+          <div class="field">
+            <label>Content</label>
+             <textarea id="content"></textarea>
+          </div>
+      </div>
+      <div style="padding:20px;" class="ui container center aligned">
+        <button id="update-btn" class="ui primary button">
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="four wide column">
     </div>
   </div>
     <script src="./lib/jquery/jquery-3.2.1.min.js"></script>

@@ -147,6 +147,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 
+
 a {
   background: transparent;
 }
@@ -1153,6 +1154,7 @@ input::selection {
 /*-------------------
        Social
 --------------------*/
+
 
 /* Facebook */
 
@@ -7004,7 +7006,7 @@ a.ui.inverted.grey.header:hover {
 .ui[class*="left floated"].header {
   float: left;
   margin-top: 0em;
-  margin-right: 0.5em;
+  margin-right: 0em;
 }
 
 .ui[class*="right floated"].header {
