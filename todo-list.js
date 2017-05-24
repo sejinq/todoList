@@ -55,12 +55,14 @@ $('#update-btn').click(function() {
     alert("ok");
     $('#title').val("");
     $('#content').val("");
+    goHome();
   }
   else if(mode == 'Update'){
     var title = $('#title').val();
     var content = $('#content').val();
     editItem(title, content);
     $('#update-btn').val("Save");
+    goHome();
   }
   else if(mode == 'Edit'){
     $('#title').attr("readonly",false);
@@ -74,12 +76,14 @@ $('#update-btn').click(function() {
 function goHome(){
   $('#default-text').show();
   $('#todo-list-content').hide();
+  $('#menu-text').html('my todo-list...');
 };
 
 $('#Menu').dropdown({
   onChange: function (val) {
+    $('#default-text').hide();
+
     if(val == "create"){
-      $('#default-text').hide();
       $("#delete-btn").hide();
       $('#update-btn').html("Save");
       $('#update-btn').val("Save");
