@@ -17,6 +17,7 @@ function note(title, content){
 //배열의 title을 받아 item을 추가 시켜줄 수 있는 html 코드로 변환해주는 함수
 function itemMsg(i, title){
   var msg =$('<div><div class="item" data-value='+i+'>'+title+'<div class="ui rating" data-max-rating="1"></div></div>');
+  console.log(msg);
   return msg;
 };
 //드롭다운의 아이템을 배열의 값에 따라 업데이트 시켜준다.
@@ -84,6 +85,8 @@ $('#Menu').dropdown({
     $('#default-text').hide();
 
     if(val == "create"){
+      $('#title').val("");
+      $('#content').val("");
       $("#delete-btn").hide();
       $('#update-btn').html("Save");
       $('#update-btn').val("Save");
