@@ -5,50 +5,59 @@
     <title>yourssu_assignment2</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
   </head>
-  <body style="background-color:powderblue;">
-    <div style="padding:10px;"class="ui inline dropdown" id="Menu">
-    <div class="text">
-    my todo-list...
-    </div>
-    <i class="dropdown icon"></i>
-    <div id="items" class="menu">
-      <div class="item" data-value='create'>
-        create todo
-        <i class="plus icon"></i>
-      </div>
+  <body style="background-color:#FF0066;">
+    <div style="background-color:Cyan ;" class="ui right aligned segment">
+      <h4 class="ui left floated header">
+        <i class="checkmark box icon"></i>
+        MYTODO-LIST</h4>
+          <div class="ui inline dropdown" id="Menu">
+          <div class="text">
+          my todo-list...
+          </div>
+          <i style="padding:1px;" class="dropdown icon"></i>
+          <div id="items" class="menu">
+            <div class="item" data-value='create'>
+              create todo
+              <i class="plus icon"></i>
+            </div>
+          </div>
+        </div>
 
-    </div>
-  </div>
-  <div style="padding:10px;"class="ui right floated header">
-    <div class="ui small basic icon buttons">
-     <button class="ui button"><i class="save icon"></i></button>
-    </div>
   </div>
 <br><br><br><br>
 <!-- style="display:none;"  -->
-  <div class="ui grid">
+  <div style="margin-top:10px;" class="ui grid">
     <div class="four wide column">
     </div>
-    <div id="default-text" class="eight wide column ui header ui container center aligned">
-      <h1>Create your todo!</h1>
+    <div style="margin-top:40px;" id="default-text" class="eight wide column ui header ui container center aligned">
+      <h2 class="ui icon header">
+        <i class="check square icon"></i>
+        <div class="content">
+          TODOLIST
+          <div class="sub header">Create your todo-list!</div>
+        </div>
+      </h2>
     </div>
-    <div style="display:none; background-color:#E6E6E6; padding:30px;" id="todo-list-content" class="eight wide column">
-      <div class="ui form">
+    <div style="display:none; background-color:white; padding:20px;" id="todo-list-content" class="eight wide column ui segments">
+      <div class="ui segment form">
           <div class="field">
             <label>Title</label>
-            <input id="title" type="text" value="mylist">
+            <input id="title" type="text">
           </div>
         </div>
         <p></p>
-      <div class="ui form">
+      <div class="ui segment form">
           <div class="field">
             <label>Content</label>
              <textarea id="content"></textarea>
           </div>
       </div>
       <div style="padding:20px;" class="ui container center aligned">
-        <button id="update-btn" class="ui primary button">
+        <button id="update-btn" class="ui primary button" value="Save">
           Save
+        </button>
+        <button style="display:none;" id="delete-btn" class="ui primary button" value="Delete">
+          Delete
         </button>
       </div>
     </div>
